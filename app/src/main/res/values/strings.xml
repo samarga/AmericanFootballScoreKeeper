@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">American Football Score Keeper</string>
+    <string name="away_team_name">Away Team</string>
+    <string name="all_fieldGoal">Field Goal</string>
+    <string name="all_touchdown">Touchdown</string>
+    <string name="all_extraPointAttempt">Extra Point Attempt</string>
+    <string name="all_twoPointConversion">Two Point Conversion</string>
+    <string name="home_team_name">Home Team</string>
+    <string name="reset">Reset</string>
+</resources>
