@@ -11,6 +11,12 @@ public class MainActivity extends AppCompatActivity {
     int scoreAwayTeam = 0;
     int scoreHomeTeam = 0;
 
+    // Set point values for different ways to score in American Football
+    int fieldGoalPts = 3;
+    int touchdownPts = 6;
+    int extraPointAttemptPts = 1;
+    int twoPointConversionPt = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +24,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team B.
+     * Displays the given score for a specified team.
      */
-    public void displayScore(View view, int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+    public void displayScore(View view, int score, String whichTeam) {
+
+        TextView scoreView = null;
+
+        switch(whichTeam)
+        {
+            case "away":
+                // Display score for away team
+                scoreView = (TextView) findViewById(R.id.textview_awayTeamScore);
+                break;
+
+            case "home":
+                // Display score for home team
+               scoreView = (TextView) findViewById(R.id.textview_homeTeamScore);
+               break;
+
+            default:
+                System.out.println("No team selected");
+        }
+
         scoreView.setText(String.valueOf(score));
+
     }
 
     /**
@@ -30,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void fieldGoal(View view) {
     // Field goals are 3 points.
-        int fieldGoalPts = 3;
-        int score;
+        int score = 0;
+        String whichTeam = "";
 
         switch(view.getId())
         {
@@ -39,16 +64,133 @@ public class MainActivity extends AppCompatActivity {
                 // New score for away team
                 scoreAwayTeam = scoreAwayTeam + fieldGoalPts;
                 score = scoreAwayTeam;
+                whichTeam = "away";
                 break;
 
             case R.id.button_homeTeamFieldGoal:
                 // New score for home team
                 scoreHomeTeam = scoreHomeTeam + fieldGoalPts;
                 score = scoreHomeTeam;
+                whichTeam = "home";
                 break;
 
+            default:
+                System.out.println("Field Goal Error");
+
         }
-        displayScore(view, score);
+        displayScore(view, score, whichTeam);
+
+    }
+
+    /**
+     * This method is called when the Touchdown buttons are clicked.
+     */
+    public void touchdown(View view) {
+
+        // Touchdowns are 6 points.
+        int score = 0;
+        String whichTeam = "";
+
+        switch(view.getId())
+        {
+            case R.id.button_awayTeamTouchdown:
+                // New score for away team
+                scoreAwayTeam = scoreAwayTeam + touchdownPts;
+                score = scoreAwayTeam;
+                whichTeam = "away";
+                break;
+
+            case R.id.button_homeTeamTouchdown:
+                // New score for home team
+                scoreHomeTeam = scoreHomeTeam + touchdownPts;
+                score = scoreHomeTeam;
+                whichTeam = "home";
+                break;
+
+            default:
+                System.out.println("Touchdown Error");
+
+        }
+        displayScore(view, score, whichTeam);
+    }
+
+    /**
+     * This method is called when the Extra Point Attempt buttons are clicked.
+     */
+    public void extraPointAttempt(View view) {
+
+        // Extra Point Attempt is 1 point.
+        int score = 0;
+        String whichTeam = "";
+
+        switch(view.getId())
+        {
+            case R.id.button_awayTeamExtraPointAttempt:
+                // New score for away team
+                scoreAwayTeam = scoreAwayTeam + extraPointAttemptPts;
+                score = scoreAwayTeam;
+                whichTeam = "away";
+                break;
+
+            case R.id.button_homeTeamExtraPointAttempt:
+                // New score for home team
+                scoreHomeTeam = scoreHomeTeam + extraPointAttemptPts;
+                score = scoreHomeTeam;
+                whichTeam = "home";
+                break;
+
+            default:
+                System.out.println("Extra Point Attempt Error");
+
+        }
+        displayScore(view, score, whichTeam);
+    }
+
+    /**
+     * This method is called when the 2 Point Conversion buttons are clicked.
+     */
+    public void twoPointConversion(View view) {
+
+        // 2 Point Conversion is 2 points.
+        int score = 0;
+        String whichTeam = "";
+
+        switch(view.getId())
+        {
+            case R.id.button_awayTeamTwoPointConversion:
+                // New score for away team
+                scoreAwayTeam = scoreAwayTeam + twoPointConversionPt;
+                score = scoreAwayTeam;
+                whichTeam = "away";
+                break;
+
+            case R.id.button_homeTeamTwoPointConversion:
+                // New score for home team
+                scoreHomeTeam = scoreHomeTeam + twoPointConversionPt;
+                score = scoreHomeTeam;
+                whichTeam = "home";
+                break;
+
+            default:
+                System.out.println("2 Point Conversion Error");
+
+        }
+        displayScore(view, score, whichTeam);
+    }
+
+
+
+    /**
+     * This method is called when the Reset Score button are clicked.
+     * Resets all scores to 0 for all teams.
+     */
+    public void resetScore(View view) {
+
+        scoreAwayTeam = 0;
+        scoreHomeTeam = 0;
+
+        displayScore(view, scoreAwayTeam, "away");
+        displayScore(view, scoreHomeTeam, "home");
 
     }
 }
