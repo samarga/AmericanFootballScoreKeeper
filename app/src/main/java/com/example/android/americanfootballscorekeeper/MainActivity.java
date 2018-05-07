@@ -23,22 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * Displays the given score for a specified team.
-     */
+    //Displays the given score for a specified team.
+
     public void displayScore(View view, int score) {
 
         TextView scoreView = null;
 
-        if (getResources().getResourceName(view.getId()).contains("away"))
-        {
-            // Display score for away team
-            scoreView = (TextView) findViewById(R.id.textview_awayTeamScore);
+        if (getResources().getResourceName(view.getId()).contains("away")) {
+            scoreView = (TextView) findViewById(R.id.textview_awayTeamScore); // Display score for away team
         }
 
          else if (getResources().getResourceName(view.getId()).contains("home")) {
-                // Display score for home team
-               scoreView = (TextView) findViewById(R.id.textview_homeTeamScore);
+               scoreView = (TextView) findViewById(R.id.textview_homeTeamScore); // Display score for home team
         }
 
         scoreView.setText(String.valueOf(score));
@@ -47,15 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    // This method is called when the Touchdown buttons are clicked.
+    // This method is called when the Touchdown buttons are clicked. Touchdowns are 6 points.
 
     public void touchdown(View view) {
-
-        // Touchdowns are 6 points.
         int score = 0;
 
-        switch(view.getId())
-        {
+        switch(view.getId()) {
             case R.id.button_awayTeamTouchdown:
                 // New score for away team
                 scoreAwayTeam = scoreAwayTeam + touchdownPts;
@@ -75,24 +68,20 @@ public class MainActivity extends AppCompatActivity {
         displayScore(view, score);
     }
 
-    /**
-     * This method is called when the Field Goal buttons are clicked.
-     */
+
+    // This method is called when the Field Goal buttons are clicked. Field goals are 3 points.
+
     public void fieldGoal(View view) {
-        // Field goals are 3 points.
         int score = 0;
 
-        switch(view.getId())
-        {
+        switch(view.getId()) {
             case R.id.button_awayTeamFieldGoal:
-                // New score for away team
-                scoreAwayTeam = scoreAwayTeam + fieldGoalPts;
+                scoreAwayTeam = scoreAwayTeam + fieldGoalPts; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamFieldGoal:
-                // New score for home team
-                scoreHomeTeam = scoreHomeTeam + fieldGoalPts;
+                scoreHomeTeam = scoreHomeTeam + fieldGoalPts; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -104,25 +93,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * This method is called when the Extra Point Attempt buttons are clicked.
-     */
+    // This method is called when the Extra Point Attempt buttons are clicked. Extra Point Attempt is 1 point.
     public void extraPointAttempt(View view) {
-
-        // Extra Point Attempt is 1 point.
         int score = 0;
 
-        switch(view.getId())
-        {
+        switch(view.getId()) {
             case R.id.button_awayTeamExtraPointAttempt:
-                // New score for away team
-                scoreAwayTeam = scoreAwayTeam + extraPointAttemptPts;
+                scoreAwayTeam = scoreAwayTeam + extraPointAttemptPts; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamExtraPointAttempt:
-                // New score for home team
-                scoreHomeTeam = scoreHomeTeam + extraPointAttemptPts;
+                scoreHomeTeam = scoreHomeTeam + extraPointAttemptPts; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -133,25 +115,18 @@ public class MainActivity extends AppCompatActivity {
         displayScore(view, score);
     }
 
-    /**
-     * This method is called when the 2 Point Conversion buttons are clicked.
-     */
+    //This method is called when the 2 Point Conversion buttons are clicked. 2 Point Conversion is 2 points.
     public void twoPointConversion(View view) {
-
-        // 2 Point Conversion is 2 points.
         int score = 0;
 
-        switch(view.getId())
-        {
+        switch(view.getId()) {
             case R.id.button_awayTeamTwoPointConversion:
-                // New score for away team
-                scoreAwayTeam = scoreAwayTeam + twoPointConversionPt;
+                scoreAwayTeam = scoreAwayTeam + twoPointConversionPt; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamTwoPointConversion:
-                // New score for home team
-                scoreHomeTeam = scoreHomeTeam + twoPointConversionPt;
+                scoreHomeTeam = scoreHomeTeam + twoPointConversionPt; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -163,24 +138,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    /**
-     * This method is called when the Reset Score button are clicked.
-     * Resets all scores to 0 for all teams.
-     */
+    //This method is called when the Reset Score button are clicked. Resets all scores to 0 for all teams.
     public void resetScore(View view) {
-
         scoreAwayTeam = 0;
         scoreHomeTeam = 0;
 
-
-        // Display score for away team
         TextView scoreView = (TextView) findViewById(R.id.textview_awayTeamScore);
-        scoreView.setText(String.valueOf(scoreAwayTeam));
+        scoreView.setText(String.valueOf(scoreAwayTeam)); // Display score for away team
 
-        // Display score for home team
         scoreView = (TextView) findViewById(R.id.textview_homeTeamScore);
-        scoreView.setText(String.valueOf(scoreHomeTeam));
+        scoreView.setText(String.valueOf(scoreHomeTeam)); // Display score for home team
 
     }
 }
