@@ -7,4 +7,5 @@
     <string name="all_twoPointConversion">Two Point Conversion</string>
     <string name="home_team_name">Home Team</string>
     <string name="reset">Reset</string>
+    <string name="all_initialScore">0</string>
 </resources>

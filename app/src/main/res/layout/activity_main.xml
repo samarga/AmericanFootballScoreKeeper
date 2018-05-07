@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="0"
+                android:text="@string/all_initialScore"
                 android:textSize="56sp"
                 android:textColor="#000000"
                 android:fontFamily="san-serif-light"/>
@@ -112,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="0"
+                android:text="@string/all_initialScore"
                 android:textSize="56sp"
                 android:textColor="#000000"
                 android:fontFamily="san-serif-light"/>
