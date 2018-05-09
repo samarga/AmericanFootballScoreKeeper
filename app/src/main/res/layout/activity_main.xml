@@ -10,70 +10,44 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            style="@style/LinearLayoutStyle">
+
             <TextView
                 android:id="@+id/textview_awayTeamName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                style="@style/TeamNameStyle"
                 android:text="@string/away_team_name"
-                android:textSize="20sp"
-                android:textColor="#616161"
-                android:fontFamily="san-serif-medium"
                 />
 
             <TextView
                 android:id="@+id/textview_awayTeamScore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                style="@style/TeamScoreStyle"
                 android:text="@string/all_initialScore"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="san-serif-light"/>
+                />
 
             <Button
                 android:id="@+id/button_awayTeamFieldGoal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleTop"
                 android:onClick="fieldGoal"
                 android:text="@string/all_fieldGoal"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                />
 
             <Button
                 android:id="@+id/button_awayTeamTouchdown"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleMiddle"
                 android:onClick="touchdown"
                 android:text="@string/all_touchdown"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                />
 
             <Button
                 android:id="@+id/button_awayTeamExtraPointAttempt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleMiddle"
                 android:onClick="extraPointAttempt"
                 android:text="@string/all_extraPointAttempt"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                />
 
             <Button
                 android:id="@+id/button_awayTeamTwoPointConversion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                style="@style/ButtonStyleBottom"
                 android:onClick="twoPointConversion"
                 android:text="@string/all_twoPointConversion" />
 
@@ -81,80 +55,46 @@
         </LinearLayout>
 
         <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray">
+            style="@style/VerticalLine">
         </View>
 
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
+            style="@style/LinearLayoutStyle">
 
             <TextView
                 android:id="@+id/textview_homeTeamName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/home_team_name"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textColor="#616161"
-                android:fontFamily="san-serif-medium"/>
+                style="@style/TeamNameStyle"
+                android:text="@string/home_team_name" />
 
             <TextView
                 android:id="@+id/textview_homeTeamScore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/all_initialScore"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="san-serif-light"/>
+                style="@style/TeamScoreStyle"
+                android:text="@string/all_initialScore"/>
 
 
             <Button
                 android:id="@+id/button_homeTeamFieldGoal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleTop"
                 android:onClick="fieldGoal"
                 android:text="@string/all_fieldGoal"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                />
 
             <Button
                 android:id="@+id/button_homeTeamTouchdown"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleMiddle"
                 android:onClick="touchdown"
-                android:text="@string/all_touchdown"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                android:text="@string/all_touchdown"/>
 
             <Button
                 android:id="@+id/button_homeTeamExtraPointAttempt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyleMiddle"
                 android:onClick="extraPointAttempt"
-                android:text="@string/all_extraPointAttempt"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"/>
+                android:text="@string/all_extraPointAttempt"/>
 
             <Button
                 android:id="@+id/button_homeTeamTwoPointConversion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                style="@style/ButtonStyleBottom"
                 android:onClick="twoPointConversion"
                 android:text="@string/all_twoPointConversion" />
         </LinearLayout>
