@@ -2,6 +2,7 @@ package com.example.android.americanfootballscorekeeper;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
-                System.out.println("Touchdown Error");
+                Log.e("touchdown","Touchdown Error");
 
         }
         displayScore(view, score);
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
-                System.out.println("Field Goal Error");
+                Log.e("fieldGoal","Field Goal Error");
 
         }
         displayScore(view, score);
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
-                System.out.println("Extra Point Attempt Error");
+                Log.e("extraPointAttempt","Extra Point Attempt Error");
 
         }
         displayScore(view, score);
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
-                System.out.println("2 Point Conversion Error");
+                Log.e("twoPointConversion","2 Point Conversion Error");
 
         }
         displayScore(view, score);
