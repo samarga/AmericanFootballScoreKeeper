@@ -50,14 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamTouchdown:
-                // New score for away team
-                scoreAwayTeam = scoreAwayTeam + touchdownPts;
+                scoreAwayTeam += touchdownPts; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamTouchdown:
-                // New score for home team
-                scoreHomeTeam = scoreHomeTeam + touchdownPts;
+                scoreHomeTeam += touchdownPts; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -76,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamFieldGoal:
-                scoreAwayTeam = scoreAwayTeam + fieldGoalPts; // New score for away team
+                scoreAwayTeam += fieldGoalPts; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamFieldGoal:
-                scoreHomeTeam = scoreHomeTeam + fieldGoalPts; // New score for home team
+                scoreHomeTeam += fieldGoalPts; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -99,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamExtraPointAttempt:
-                scoreAwayTeam = scoreAwayTeam + extraPointAttemptPts; // New score for away team
+                scoreAwayTeam += extraPointAttemptPts; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamExtraPointAttempt:
-                scoreHomeTeam = scoreHomeTeam + extraPointAttemptPts; // New score for home team
+                scoreHomeTeam += extraPointAttemptPts; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -121,12 +119,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamTwoPointConversion:
-                scoreAwayTeam = scoreAwayTeam + twoPointConversionPt; // New score for away team
+                scoreAwayTeam += twoPointConversionPt; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamTwoPointConversion:
-                scoreHomeTeam = scoreHomeTeam + twoPointConversionPt; // New score for home team
+                scoreHomeTeam += twoPointConversionPt; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
