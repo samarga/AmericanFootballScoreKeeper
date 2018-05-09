@@ -11,11 +11,11 @@ public class MainActivity extends AppCompatActivity {
     int scoreAwayTeam = 0;
     int scoreHomeTeam = 0;
 
-    // Set point values for different ways to score in American Football
-    int fieldGoalPts = 3;
-    int touchdownPts = 6;
-    int extraPointAttemptPts = 1;
-    int twoPointConversionPt = 2;
+    // CONSTANTS Set point values for different ways to score in American Football
+    private static final int FIELD_GOAL_PTS = 3;
+    private static final int TOUCHDOWN_PTS = 6;
+    private static final int EXTRA_POINT_ATTEMPT_PT = 1;
+    private static final int TWO_POINT_CONVERSION_PTS = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamTouchdown:
-                scoreAwayTeam += touchdownPts; // New score for away team
+                scoreAwayTeam += TOUCHDOWN_PTS; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamTouchdown:
-                scoreHomeTeam += touchdownPts; // New score for home team
+                scoreHomeTeam += TOUCHDOWN_PTS; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamFieldGoal:
-                scoreAwayTeam += fieldGoalPts; // New score for away team
+                scoreAwayTeam += FIELD_GOAL_PTS; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamFieldGoal:
-                scoreHomeTeam += fieldGoalPts; // New score for home team
+                scoreHomeTeam += FIELD_GOAL_PTS; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -97,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamExtraPointAttempt:
-                scoreAwayTeam += extraPointAttemptPts; // New score for away team
+                scoreAwayTeam += EXTRA_POINT_ATTEMPT_PT; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamExtraPointAttempt:
-                scoreHomeTeam += extraPointAttemptPts; // New score for home team
+                scoreHomeTeam += EXTRA_POINT_ATTEMPT_PT; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
@@ -119,12 +119,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch(view.getId()) {
             case R.id.button_awayTeamTwoPointConversion:
-                scoreAwayTeam += twoPointConversionPt; // New score for away team
+                scoreAwayTeam += TWO_POINT_CONVERSION_PTS; // New score for away team
                 score = scoreAwayTeam;
                 break;
 
             case R.id.button_homeTeamTwoPointConversion:
-                scoreHomeTeam += twoPointConversionPt; // New score for home team
+                scoreHomeTeam += TWO_POINT_CONVERSION_PTS; // New score for home team
                 score = scoreHomeTeam;
                 break;
 
