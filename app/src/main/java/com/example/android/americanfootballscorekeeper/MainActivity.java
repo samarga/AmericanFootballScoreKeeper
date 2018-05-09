@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     // Set initial scores for both teams to 0
     private int scoreAwayTeam = 0;
     private int scoreHomeTeam = 0;
+    private int score = 0;
 
     // CONSTANTS Set point values for different ways to score in American Football
     private static final int FIELD_GOAL_PTS = 3;
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
     // This method is called when the Touchdown buttons are clicked. Touchdowns are 6 points.
 
     public void touchdown(View view) {
-        int score = 0;
-
         switch(view.getId()) {
             case R.id.button_awayTeamTouchdown:
                 scoreAwayTeam += TOUCHDOWN_PTS; // New score for away team
@@ -70,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
     // This method is called when the Field Goal buttons are clicked. Field goals are 3 points.
 
     public void fieldGoal(View view) {
-        int score = 0;
-
         switch(view.getId()) {
             case R.id.button_awayTeamFieldGoal:
                 scoreAwayTeam += FIELD_GOAL_PTS; // New score for away team
@@ -93,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
 
     // This method is called when the Extra Point Attempt buttons are clicked. Extra Point Attempt is 1 point.
     public void extraPointAttempt(View view) {
-        int score = 0;
-
         switch(view.getId()) {
             case R.id.button_awayTeamExtraPointAttempt:
                 scoreAwayTeam += EXTRA_POINT_ATTEMPT_PT; // New score for away team
@@ -115,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
     //This method is called when the 2 Point Conversion buttons are clicked. 2 Point Conversion is 2 points.
     public void twoPointConversion(View view) {
-        int score = 0;
-
         switch(view.getId()) {
             case R.id.button_awayTeamTwoPointConversion:
                 scoreAwayTeam += TWO_POINT_CONVERSION_PTS; // New score for away team
