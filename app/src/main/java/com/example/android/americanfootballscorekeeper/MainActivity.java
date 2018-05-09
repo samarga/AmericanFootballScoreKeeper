@@ -8,8 +8,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // Set initial scores for both teams to 0
-    int scoreAwayTeam = 0;
-    int scoreHomeTeam = 0;
+    private int scoreAwayTeam = 0;
+    private int scoreHomeTeam = 0;
 
     // CONSTANTS Set point values for different ways to score in American Football
     private static final int FIELD_GOAL_PTS = 3;
